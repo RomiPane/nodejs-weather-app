@@ -12,12 +12,16 @@ const forecast = (latitude, longitude, callback) => {
         const temperature = response.body.current.temperature;
         const feelsLike = response.body.current.feelslike;
         const description = response.body.current.weather_descriptions[0];
+        const isDay = response.body.current.is_day;
+        const humidity = response.body.current.humidity;
 
         const forecast = description + '. It is currently ' + temperature + ' degrees but it feels like ' + feelsLike + ' degrees out.';
         const data = {
             temperature,
             feelsLike,
             forecast,
+            isDay,
+            humidity,
         };
 
         callback(undefined, data);
