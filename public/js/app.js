@@ -13,7 +13,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     fetch(`http://localhost:3000/weather?location=${location}`).then((response) => {
         if (!response.ok) {
-            messageOne.innerHTML = 'Failed to fetch weather forecast information';
+            messageOne.innerHTML = 'Failed to get weather forecast information';
             return;
         }
 
