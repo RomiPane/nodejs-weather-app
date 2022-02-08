@@ -29,7 +29,7 @@ weatherForm.addEventListener('submit', (e) => {
 
             messageOne.innerHTML = `${data.placeName}`;
             messageTwo.innerHTML = `${data.forecast.forecast}`;
-            messageHumidity.innerHTML = `Humidity is ${data.forecast.humidity}`;
+            messageHumidity.innerHTML = `Humidity is ${data.forecast.humidity}%`;
             messageDay.innerHTML = `Is day : ${data.forecast.isDay}`;
         });
     });
